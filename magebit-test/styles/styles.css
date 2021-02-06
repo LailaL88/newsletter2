@@ -1,0 +1,404 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.left-side {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 680px;
+          flex: 0 0 680px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  z-index: 1;
+}
+
+.left-side a {
+  text-decoration: none;
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6A707B;
+}
+
+.right-side {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-image: url(../img/image_summer.jpg);
+  background-size: cover;
+}
+
+nav {
+  height: 66px;
+  width: 71%;
+  margin: 100px auto 0 auto;
+}
+
+nav li {
+  list-style-type: none;
+  float: left;
+  margin-top: 15px;
+  margin-left: 5.3%;
+}
+
+.logo {
+  float: left;
+  width: 44%;
+}
+
+.content-container {
+  padding-top: 205px;
+  width: 399px;
+  margin: 0 auto 340px auto;
+}
+
+.content-container h3 {
+  font-family: "Georgia";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #131821;
+}
+
+.content-container p {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6A707B;
+}
+
+.content-container a {
+  color: #131821;
+  text-decoration: underline;
+}
+
+.content-container a:hover {
+  color: #4066A5;
+}
+
+.content-container a:active {
+  color: #233759;
+}
+
+.logo-text {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.text-input-wrapper {
+  border: 1px solid #E3E3E4;
+  width: 663px;
+  height: 70px;
+  margin-left: -40px;
+  background-color: white;
+}
+
+.text-input-wrapper:hover {
+  border: 1px solid #4066A5;
+  color: #131821;
+}
+
+.text-input {
+  height: 100%;
+  width: 83%;
+  border: none;
+  outline: none;
+  padding-left: 44px;
+  font-family: "Arial";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6A707B;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition-delay: 9999s;
+  transition-delay: 9999s;
+}
+
+.arrow {
+  outline: none;
+}
+
+.line {
+  position: absolute;
+  width: 4px;
+  height: 70px;
+  background: #4066A5;
+}
+
+label {
+  padding-left: 25px;
+  font-family: "Arial";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6A707B;
+}
+
+.checkbox {
+  opacity: 0;
+  margin-top: 34px;
+}
+
+.mycheckbox {
+  position: absolute;
+  margin-top: 25px;
+  left: 160px;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin-left: -20px;
+  border: 1px solid #E3E3E4;
+  border-radius: 3px;
+  text-align: center;
+  z-index: -2;
+}
+
+.mycheckbox img {
+  margin-top: -5px;
+  width: 50%;
+}
+
+.mycheckbox-clicked {
+  background: #4066A5;
+}
+
+hr {
+  color: #E3E3E4;
+  margin-top: 50px;
+  margin-bottom: 45px;
+}
+
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 16px;
+  float: left;
+  width: 46px;
+  height: 46px;
+  border: 2px solid #E3E3E4;
+  border-radius: 100%;
+}
+
+.icon:hover {
+  color: white;
+  opacity: 1;
+}
+
+i {
+  color: #131821;
+  opacity: 0.3;
+}
+
+.youtube {
+  margin-right: 0;
+}
+
+.icon-wrapper {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.facebook:hover {
+  background-color: #4267B2;
+}
+
+.instagram:hover {
+  background-color: #C13584;
+}
+
+.twitter:hover {
+  background-color: #1DA1F2;
+}
+
+.youtube:hover {
+  background-color: #FF0000;
+}
+
+.facebook:focus {
+  background-color: #2F4A80;
+}
+
+.instagram:active {
+  background-color: #8F2762;
+}
+
+.twitter:active {
+  background-color: #177FBF;
+}
+
+.youtube:active {
+  background-color: #CC0000;
+}
+
+@media only screen and (max-width: 768px) {
+  .content-container {
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    overflow: hidden;
+    margin: 200px auto;
+    z-index: -3;
+    width: 0;
+    display: block;
+    width: 80%;
+  }
+  .content-container h3 {
+    font-size: 24px;
+  }
+  .content-container p, .content-container a {
+    font-size: 14px;
+  }
+  .icon {
+    margin-right: 10px;
+  }
+  .text-input-wrapper {
+    width: 100%;
+    margin-left: 0;
+  }
+  .text-input {
+    width: 80%;
+    font-size: 16px;
+  }
+  .left-side {
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+  }
+  .mycheckbox {
+    left: initial;
+  }
+  .checkbox {
+    margin-left: 6px;
+  }
+  nav {
+    width: 100%;
+    margin-top: 0;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .logo-text {
+    display: none;
+  }
+  nav li,
+  .logo {
+    margin-top: 0;
+  }
+  .logo {
+    margin-left: 30px;
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 679px) {
+  .left-side {
+    background-image: url(../img/image_summer.jpg);
+    background-size: cover;
+    background-position: -380px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+  .left-side a {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .text-input {
+    padding-left: 10px;
+  }
+}
+
+.message,
+.message-empty,
+.message-colombia,
+.checkboxErr {
+  width: 90%;
+  padding: 20px;
+  margin-top: 30px;
+  border: 1px solid red;
+  color: red;
+  display: none;
+}
+
+.php-message {
+  width: 90%;
+  padding: 20px;
+  margin-top: 30px;
+  border: 1px solid red;
+  color: red;
+}
+
+.cup {
+  padding-bottom: 20px;
+}
+
+.php-checkbox {
+  margin-left: -12px;
+  z-index: 1;
+}
+
+.success-message {
+  display: none;
+}
+/*# sourceMappingURL=styles.css.map */

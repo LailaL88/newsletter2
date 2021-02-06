@@ -1,0 +1,387 @@
+$background: white;
+$hoverColor: #4066A5;
+$textColor: #6A707B;
+
+@mixin error {
+    width: 90%;
+    padding: 20px;
+    margin-top: 30px;
+    border: 1px solid red;
+    color: red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.left-side {
+    flex: 0 0 680px;
+    align-items: stretch;
+    z-index: 1;
+
+    a {
+        text-decoration: none;
+        font-family: Arial;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $textColor;
+    }
+}
+
+.right-side {
+    flex-grow: 1;
+    background-image: url(../img/image_summer.jpg);
+    background-size: cover;
+}
+
+nav {
+    height: 66px;
+    width: 71%;
+    margin: 100px auto 0 auto;
+
+    li {
+        list-style-type: none;
+        float: left;
+        margin-top: 15px;
+        margin-left: 5.3%;
+    }
+}
+
+.logo {
+    float: left;
+    width: 44%;
+}
+
+.content-container {
+    padding-top: 205px;
+    width: 399px;
+    margin: 0 auto 340px auto;
+
+    h3 {
+        font-family: "Georgia";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 44px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #131821;
+    }
+
+    p {
+        padding-top: 20px;
+        padding-bottom: 50px;
+        font-family: Arial;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $textColor;
+    }
+
+    a {
+        color: #131821;
+        text-decoration: underline;
+
+        &:hover {
+            color: $hoverColor;
+        }
+
+        &:active {
+            color: #233759;
+        }
+    }
+}
+
+.logo-text {
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.text-input-wrapper {
+    border: 1px solid #E3E3E4;
+    width: 663px;
+    height: 70px;
+    margin-left: -40px;
+    background-color: $background;
+
+    &:hover {
+        border: 1px solid $hoverColor;
+        color: #131821;
+    }
+}
+
+.text-input {
+    height: 100%;
+    width: 83%;
+    border: none;
+    outline: none;
+    padding-left: 44px;
+    font-family: "Arial";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $textColor;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition-delay: 9999s;
+    transition-delay: 9999s;
+}
+
+.arrow {
+    outline: none;
+}
+
+.line {
+    position: absolute;
+    width: 4px;
+    height: 70px;
+    background: $hoverColor;
+}
+
+label {
+    padding-left: 25px;
+    font-family: "Arial";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $textColor;
+}
+
+.checkbox {
+    opacity: 0;
+    margin-top: 34px;
+}
+
+.mycheckbox {
+    position: absolute;
+    margin-top: 25px;
+    left: 160px;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-left: -20px;
+    border: 1px solid #E3E3E4;
+    border-radius: 3px;
+    text-align: center;
+    z-index: -2;
+
+    img {
+        margin-top: -5px;
+        width: 50%;
+    }
+}
+
+.mycheckbox-clicked {
+    background: $hoverColor;
+}
+
+hr {
+    color: #E3E3E4;
+    margin-top: 50px;
+    margin-bottom: 45px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    float: left;
+    width: 46px;
+    height: 46px;
+    border: 2px solid #E3E3E4;
+    border-radius: 100%;
+
+    &:hover {
+        color: white;
+        opacity: 1;
+    }
+}
+
+i {
+    color: #131821;
+    opacity: 0.3;
+}
+
+.youtube {
+    margin-right: 0;
+}
+
+.icon-wrapper {
+    width: 250px;
+    margin: 0 auto;
+}
+
+.facebook:hover {
+    background-color: #4267B2;
+}
+
+.instagram:hover {
+    background-color: #C13584;
+}
+
+.twitter:hover {
+    background-color: #1DA1F2;
+}
+
+.youtube:hover {
+    background-color: #FF0000;
+}
+
+.facebook:focus {
+    background-color: #2F4A80;
+}
+
+.instagram:active {
+    background-color: #8F2762;
+}
+
+.twitter:active {
+    background-color: #177FBF;
+}
+
+.youtube:active {
+    background-color: #CC0000;
+}
+
+@media only screen and (max-width: 768px) {
+    .content-container {
+        position: relative;
+        padding: 20px;
+        background-color: $background;
+        overflow: hidden;
+        margin: 200px auto;
+        z-index: -3;
+        width: 0;
+        display:block;
+        width: 80%;
+        h3 {
+            font-size: 24px;
+        }
+
+        p, a {
+            font-size: 14px;
+        }
+    }
+
+    .icon {
+        margin-right: 10px;
+    }
+    .text-input-wrapper {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .text-input {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .left-side {
+        flex-shrink: 1;
+    }
+
+    .mycheckbox {
+        left: initial;
+    }
+
+    .checkbox {
+        margin-left: 6px;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 0;
+        background-color: $background;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    nav li,
+    .logo {
+        margin-top: 0;
+    }
+
+    .logo {
+        margin-left: 30px;
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 679px) {
+    .left-side {
+        background-image: url(../img/image_summer.jpg);
+        background-size: cover;
+        background-position: -380px;
+        align-items: center;
+        flex: 1 1 100%;
+        a {
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .text-input {
+        padding-left: 10px;
+    } 
+}
+
+.message,
+.message-empty,
+.message-colombia,
+.checkboxErr {
+    @include error();
+    display: none;
+}
+
+.php-message {
+    @include error();
+}
+
+.cup {
+    padding-bottom: 20px;
+}
+
+.php-checkbox {
+    margin-left: -12px;
+    z-index: 1;
+}
+
+.success-message {
+    display: none;
+}
