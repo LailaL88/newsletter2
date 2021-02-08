@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,6 +59,7 @@
                 <div class="checkboxErr"> </div>
 
             <?php
+
             $email = $checkbox = "";
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -69,15 +68,14 @@
                     echo "<noscript><div class='php-message'>$emailErr</div></noscript>";
                 } else {
                     $email = test_input($_POST["email"]);
-
+                }
                     // check if e-mail address is well-formed
-                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                        $emailErr = "Please provide a valid e-mail address";
-                        echo "<noscript><div class='php-message'>$emailErr</div></noscript>";
-                    } else if (substr($email, -3) == ".co") {
-                        $emailErr = "We are not accepting subscriptions from Colombia emails";
-                        echo "<noscript><div class='php-message'>$emailErr</div></noscript>";
-                    }
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $emailErr = "Please provide a valid e-mail address";
+                    echo "<noscript><div class='php-message'>$emailErr</div></noscript>";
+                } elseif (substr($email, -3) == ".co") {
+                    $emailErr = "We are not accepting subscriptions from Colombia emails";
+                    echo "<noscript><div class='php-message'>$emailErr</div></noscript>";
                 }
 
                 if (empty($_POST["php-checkbox"])) {
@@ -94,9 +92,9 @@
               $data = htmlspecialchars($data);
               return $data;
             }
-            session_start();
-            
-            $_SESSION['email'] = $email;
+
+            // session_start();
+            // $_SESSION['email'] = $email;
             
             ?>
                 <hr>
@@ -134,19 +132,15 @@
 </html>
 
 <?php 
-$email = test_input($_POST["email"]?? null);
-if (!empty($_POST["email"]) && filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($_POST["checkbox"]) && substr($email, -3) != ".co"){
-$pdo = new PDO('mysql:host=localhost;dbname=magebit_test', 'root', '', array(PDO::ATTR_PERSISTENT => 'unbuff', PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => false));
-
-$sql = "INSERT INTO `emails` (email) VALUES (:email)";
-$stmt = $pdo->prepare($sql);
-$stmt->bindParam(":email", $email);
-
-$email = $_POST['email'];
-
-$form = $_POST;
-$id = $form[ 'email' ];                    
-
-$result = $stmt->execute();
-}
+    $email = test_input($_POST["email"]?? null);
+    if (!empty($_POST["email"]) && filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($_POST["checkbox"]) && substr($email, -3) != ".co"){
+        $pdo = new PDO('mysql:host=localhost;dbname=magebit_test', 'root', '', array(PDO::ATTR_PERSISTENT => 'unbuff', PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => false));
+        $sql = "INSERT INTO `emails` (email) VALUES (:email)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(":email", $email);
+        $email = $_POST['email'];
+        $form = $_POST;
+        $id = $form[ 'email' ];                    
+        $result = $stmt->execute();
+    }
 ?>

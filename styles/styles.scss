@@ -126,7 +126,6 @@ nav {
 
     &:hover {
         border: 1px solid $hoverColor;
-        color: #131821;
     }
 }
 
@@ -144,6 +143,9 @@ nav {
     letter-spacing: 0em;
     text-align: left;
     color: $textColor;
+    &:hover {
+        color: #131821;
+    }
 }
 
 input:-webkit-autofill,

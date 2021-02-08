@@ -130,7 +130,6 @@ nav li {
 
 .text-input-wrapper:hover {
   border: 1px solid #4066A5;
-  color: #131821;
 }
 
 .text-input {
@@ -147,6 +146,10 @@ nav li {
   letter-spacing: 0em;
   text-align: left;
   color: #6A707B;
+}
+
+.text-input:hover {
+  color: #131821;
 }
 
 input:-webkit-autofill,
