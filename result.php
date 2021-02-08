@@ -45,7 +45,7 @@ try {
             ';
         }
 
-        function makeEmailButtons()
+        public function makeEmailButtons()
         {
             foreach ($this->model->uniquearray as $value)
             {
@@ -58,7 +58,7 @@ try {
             }
         } 
         
-        function makeDeleteButtonsWork()
+        public function makeDeleteButtonsWork()
         {
             foreach ($this->model->rowIds as $theId)
             {
@@ -69,7 +69,7 @@ try {
             }
         }
 
-        function showEmails($q)
+        public function showEmails($q)
         {
             echo '
             <br>
@@ -206,7 +206,7 @@ try {
     $q=$pdo->query($model->sql);
     $q->setFetchMode(PDO::FETCH_ASSOC);
     $view->showEmails($q);
-    
+
 } catch (PDOException $e) {
     die("Could not connect to the database". $e->getMessage());
 } 
